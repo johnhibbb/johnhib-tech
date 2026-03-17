@@ -1,0 +1,7 @@
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-3-paramset-keyframe/build-x86/CMakeFiles/SphereKeyframe.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-3-paramset-keyframe/build-x86/CMakeFiles/edit_cache.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-3-paramset-keyframe/build-x86/CMakeFiles/rebuild_cache.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-3-paramset-keyframe/build-x86/CMakeFiles/list_install_components.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-3-paramset-keyframe/build-x86/CMakeFiles/install.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-3-paramset-keyframe/build-x86/CMakeFiles/install/local.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-3-paramset-keyframe/build-x86/CMakeFiles/install/strip.dir

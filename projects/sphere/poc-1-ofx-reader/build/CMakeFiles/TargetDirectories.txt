@@ -1,0 +1,7 @@
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-1-ofx-reader/build/CMakeFiles/SphereReader.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-1-ofx-reader/build/CMakeFiles/edit_cache.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-1-ofx-reader/build/CMakeFiles/rebuild_cache.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-1-ofx-reader/build/CMakeFiles/list_install_components.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-1-ofx-reader/build/CMakeFiles/install.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-1-ofx-reader/build/CMakeFiles/install/local.dir
+/Users/maria/.openclaw/workspaceconfigured./projects/sphere/poc-1-ofx-reader/build/CMakeFiles/install/strip.dir

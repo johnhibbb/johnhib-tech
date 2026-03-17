@@ -1,0 +1,17 @@
+# Credentials — never commit
+credentials.md
+auth-profiles.json
+
+# Temp / build artifacts
+tmp/
+*.log
+
+# Node
+node_modules/
+.next/
+
+# macOS
+.DS_Store
+
+# Inbound media cache
+media/inbound/

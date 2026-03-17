@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --link: #0066cc;
+  --muted: #666666;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.prose-article {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #111111;
+}
+
+.prose-article p {
+  margin-bottom: 1.5rem;
+}
+
+.prose-article h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #111111;
+}
+
+.prose-article ul, .prose-article ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose-article li {
+  margin-bottom: 0.4rem;
+}
+
+.prose-article blockquote {
+  border-left: 3px solid #ddd;
+  padding-left: 1rem;
+  color: #444444;
+  margin: 1.5rem 0;
+}
+
+.prose-article code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.875rem;
+  background: #f5f5f5;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+.prose-article pre {
+  background: #f5f5f5;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.prose-article pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose-article a {
+  color: #0066cc;
+}
+
+.prose-article strong {
+  font-weight: 600;
+}
+
+.prose-article hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 2.5rem 0;
+}

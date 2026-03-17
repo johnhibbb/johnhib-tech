@@ -1,0 +1,25 @@
+Task,Category,Progress,Impact,Priority Score,Next Action,Blocker
+Fix iMessage Automation Permission,OpenClaw / Tech,Almost Done,High,1,System Settings → Privacy & Security → Automation → enable imsg,John must do this manually
+Apple AI Ops Lead Application,Job Applications,In Progress,Critical,2,Verify Beats numbers + update resume bullets + apply,None — ready to move
+Hannah Reference Brief,Job Applications,Blocked,High,3,John fills in 2 gaps (target role + what you worked on together),Waiting on John
+Stack AI — AI Strategist,Job Applications,Not Started,Critical,4,Apply at jobs.ashbyhq.com/stack-ai,None — just needs an application
+R/GA — AI Solutions Director,Job Applications,Not Started,Critical,5,Apply at boards.greenhouse.io/rga,None — just needs an application
+ElevenLabs — Strategic Partnerships,Job Applications,Not Started,Critical,6,Apply at jobs.ashbyhq.com/elevenlabs,None — just needs an application
+Runway — AI Engagement Manager,Job Applications,Not Started,Critical,7,Apply at job-boards.greenhouse.io/runwayml,None — just needs an application
+FLORA — Forward Deployed Creative,Job Applications,Not Started,High,8,Apply at jobs.ashbyhq.com/FLORA,None — just needs an application
+Don Kim / MATTE Outreach,Networking,Ready to Send,High,9,Send the drafted message — it's already written,John must send it
+SQL Case Study,Portfolio / Credentials,Scheduled,High,10,Review cron output — pick a project to build,Cron may have failed due to iMessage issue
+GitHub Presence,Portfolio / Credentials,Scheduled,High,11,Same as SQL — review output and scope a project,Cron may have failed due to iMessage issue
+Portfolio Site — johnhib.com,Portfolio / Credentials,In Progress,High,12,John provides wireframes → build with Claude Code + Next.js,Wireframes from John
+Portfolio Site — johnhib.tech,Portfolio / Credentials,In Progress,High,13,Scope public project board + tiered access,Wireframes from John
+The Limits Essay Series,Creative Portfolio,Not Started,Medium,14,Pick platform (Substack) + write first essay,None
+Creator Stack Living Journal,Creative Portfolio,Not Started,Medium,15,Pick 3 tools (Runway / ElevenLabs / Midjourney) + write first 3 entries,None
+Brief to Build Case Studies,Creative Portfolio,Not Started,Medium,16,Pick a brief (Czech Tourism?) and scope first case study,None
+Scene Direction Agent,Creative Portfolio,Not Started,Medium,17,Scope prompt architecture + output format — build v0 on Claude API,None
+Daily Content Brainstorm Cron,Daily Practice,Not Started,Medium,18,Set up 7am cron job,None
+Taste Agent,Backlog / Builds,Not Started,Medium,19,Scope: prompt expander + image comparison across 4 models,None
+Yapper Agent,Backlog / Builds,Not Started,Medium,20,Define voice personality + conversation world,None
+The Universe / Viral Concept,Backlog / Builds,Not Started,High (long-term),21,Study the Punch phenomenon first — deconstruct before building,None
+Node Environment (Image/Video/Waveform),Backlog / Builds,Not Started,Medium,22,Define scope + stack,None
+LLM Memory Retrieval,Backlog / Builds,Not Started,Low,23,Define what "important" means across model outputs,None
+OpenClaw Improvements (iMessage image intake etc.),OpenClaw / Tech,Not Started,Low,24,Scope each item separately after iMessage fix,iMessage fix first
