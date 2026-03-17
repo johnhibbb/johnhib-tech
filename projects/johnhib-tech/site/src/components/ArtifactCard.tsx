@@ -15,6 +15,8 @@ const BADGE_STYLES: Record<string, { background: string; color: string }> = {
   shell:    { background: '#e8faf0', color: '#1a7a4a' },
   file:     { background: '#f5f0ff', color: '#6b3fa0' },
   incident: { background: '#fef0f0', color: '#c0392b' },
+  cron:     { background: '#fff8e8', color: '#a05a00' },
+  report:   { background: '#f0f0f0', color: '#444444' },
 };
 
 export default function ArtifactCard({ artifact, isOpen, onToggle }: ArtifactCardProps) {

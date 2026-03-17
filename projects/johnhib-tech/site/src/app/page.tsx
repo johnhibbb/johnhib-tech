@@ -1,20 +1,32 @@
+import Link from "next/link";
 import { articles, interactiveArticles } from "@/lib/articles";
+import VersionBadge from "@/components/VersionBadge";
 
 const allArticles = [
-  ...interactiveArticles.map(a => ({ slug: a.slug, title: a.title, date: a.date, excerpt: a.excerpt })),
-  ...articles.map(a => ({ slug: a.slug, title: a.title, date: a.date, excerpt: a.excerpt })),
+  ...interactiveArticles.map(a => ({ slug: a.slug, title: a.title, date: a.date, excerpt: a.excerpt, tag: a.tag })),
+  ...articles.map(a => ({ slug: a.slug, title: a.title, date: a.date, excerpt: a.excerpt, tag: undefined as string | undefined })),
 ];
 
 export default function Home() {
   return (
+    <>
+    <VersionBadge />
     <main className="mx-auto max-w-[680px] px-6 py-20">
       {/* Header */}
       <header className="mb-20">
         <h1
-          className="text-5xl font-bold tracking-widest uppercase mb-3"
-          style={{ color: "#111111" }}
+          className="mb-3"
+          style={{
+            fontFamily:    "var(--font-playfair), Georgia, serif",
+            fontStyle:     "italic",
+            fontWeight:    700,
+            fontSize:      "clamp(2.8rem, 6vw, 4.5rem)",
+            letterSpacing: "-0.01em",
+            lineHeight:    1.0,
+            color:         "#111111",
+          }}
         >
-          JOHNHIB.TECH
+          .Tech
         </h1>
         <p style={{ color: "#666666" }} className="text-base">
           Notes on building with AI.
@@ -31,28 +43,31 @@ export default function Home() {
         </h2>
         <div className="flex flex-col gap-10">
           {allArticles.map((article) => (
-            <article key={article.slug} className="relative">
-              {/* Title — blurred, non-clickable */}
-              <h3
-                className="text-lg font-medium leading-snug mb-1 select-none"
-                style={{ color: "#0066cc", filter: "blur(5px)", userSelect: "none", pointerEvents: "none" }}
+            <article key={article.slug}>
+              <Link
+                href={`/writings/${article.slug}`}
+                style={{ textDecoration: "none" }}
               >
-                {article.title}
-              </h3>
-              {/* Date — blurred */}
-              <p
-                className="text-sm mb-2 select-none"
-                style={{ color: "#666666", filter: "blur(4px)", userSelect: "none" }}
-              >
-                {article.date}
-              </p>
-              {/* COMING SOON badge */}
-              <span
-                className="inline-block text-xs font-semibold uppercase tracking-widest px-2 py-0.5 rounded"
-                style={{ color: "#999999", border: "1px solid #dddddd" }}
-              >
-                Coming Soon
-              </span>
+                <h3
+                  className="text-lg font-medium leading-snug mb-1"
+                  style={{ color: "#111111" }}
+                >
+                  {article.title}
+                  {article.tag && (
+                    <span
+                      className="text-xs font-normal uppercase tracking-wide ml-2"
+                      style={{ color: "#666666" }}
+                    >
+                      {article.tag}
+                    </span>
+                  )}
+                </h3>
+                {article.excerpt && (
+                  <p className="text-sm" style={{ color: "#666666", marginTop: "4px" }}>
+                    {article.excerpt}
+                  </p>
+                )}
+              </Link>
             </article>
           ))}
         </div>
@@ -77,14 +92,10 @@ export default function Home() {
                 In progress
               </span>
             </h3>
-            <p className="text-base leading-relaxed" style={{ color: "#111111" }}>
-              A DaVinci Resolve OFX plugin for 360° video reframing. Built for
-              creators who shoot with DJI Osmo 360 and edit in Resolve — filling
-              a gap no plugin currently covers.
-            </p>
           </div>
         </div>
       </section>
     </main>
+    </>
   );
 }

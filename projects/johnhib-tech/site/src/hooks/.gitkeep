@@ -1,0 +1,8 @@
+# hooks/
+# Custom React hooks for .tech interactive components.
+# Add here as ArtifactViewer, annotation panels, and AI features grow.
+#
+# Convention:
+#   useArtifact.ts     — artifact expand/collapse state
+#   useAnnotation.ts   — annotation highlight/panel state
+#   useRateLimit.ts    — client-side rate limit feedback (when API routes land)

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import type { InteractiveArticle } from '@/lib/articles';
 import ArtifactCard from './ArtifactCard';
+import PromptCard from './PromptCard';
 
 interface InteractiveArticlePageProps {
   article: InteractiveArticle;
@@ -80,6 +81,11 @@ export default function InteractiveArticlePage({ article }: InteractiveArticlePa
           />
         ))}
       </section>
+
+      {/* Prompt card */}
+      {article.promptCard && (
+        <PromptCard card={article.promptCard} />
+      )}
     </main>
   );
 }
