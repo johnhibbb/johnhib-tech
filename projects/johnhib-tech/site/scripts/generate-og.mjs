@@ -160,7 +160,7 @@ function buildCard({ title, excerpt, tag, isHome }) {
               {
                 type: 'span',
                 props: {
-                  style: { fontFamily: 'Inter', fontWeight: 400, color: '#444', fontSize: 22, letterSpacing: '0.04em' },
+                  style: { fontFamily: 'Inter', fontWeight: 400, color: '#444', fontSize: 23, letterSpacing: '0.04em' },
                   children: 'Building with AI, documented as it happens.',
                 },
               },
