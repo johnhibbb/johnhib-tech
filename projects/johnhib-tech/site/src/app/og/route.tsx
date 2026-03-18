@@ -7,22 +7,6 @@ export const runtime = "edge";
 const GOLD = "#C9A84C";
 const BG = "#0a0a0a";
 
-async function loadGoogleFont(family: string, params: string): Promise<ArrayBuffer> {
-  const cssUrl = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(family)}:${params}&display=swap`;
-  const css = await fetch(cssUrl, {
-    headers: {
-      "User-Agent":
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    },
-  }).then((r) => r.text());
-
-  const match = css.match(/url\((https:\/\/fonts\.gstatic\.com[^)]+)\)/);
-  if (!match) throw new Error(`Could not parse font URL for ${family}`);
-
-  const fontRes = await fetch(match[1]);
-  return fontRes.arrayBuffer();
-}
-
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const slug = searchParams.get("slug");
@@ -43,9 +27,11 @@ export async function GET(req: NextRequest) {
     }
   }
 
+  // Fetch fonts from /public — same Vercel deployment, no external dependency, no timeout risk
+  const baseUrl = req.nextUrl.origin;
   const [cormorantData, interData] = await Promise.all([
-    loadGoogleFont("Cormorant Garamond", "ital,wght@1,600"),
-    loadGoogleFont("Inter", "wght@400"),
+    fetch(`${baseUrl}/fonts/CormorantGaramond-Italic-700.ttf`).then((r) => r.arrayBuffer()),
+    fetch(`${baseUrl}/fonts/Inter-Regular.woff2`).then((r) => r.arrayBuffer()),
   ]);
 
   const truncatedExcerpt =
