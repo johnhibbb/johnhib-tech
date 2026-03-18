@@ -14,7 +14,7 @@ export const interactiveArticles: InteractiveArticle[] = [
     slug: "ticket-watch",
     title: "Ticket Watch",
     date: "March 2026",
-    tag: "Live",
+    tag: "Automation",
     excerpt:
       "Ye announced two LA shows. I wanted VIP seats. Instead of refreshing StubHub every morning, I delegated the watch to an AI agent — and let it run.",
     intro:
@@ -169,6 +169,7 @@ Rec: Wait. No movement yet. Check again Fri.
     slug: "persona-extraction-from-llms",
     title: "Persona Extraction",
     date: "March 2026",
+    tag: "Technique",
     excerpt:
       "Your LLMs have been building a model of you for months. Before you set up an AI agent, ask them to reflect it back — the output becomes the foundation everything else runs on.",
     intro:
@@ -345,6 +346,7 @@ Plain text. No asterisks. Domain headers only. End with a NORTH STAR SYNTHESIS: 
     slug: "how-to-secure-your-openclaw-setup",
     title: "OpenClaw Security Protocol",
     date: "March 2026",
+    tag: "Setup",
     excerpt:
       "OpenClaw gives an AI agent real access to your machine — files, messages, the terminal. That power needs a fence around it. Here's what we locked down.",
     intro:
