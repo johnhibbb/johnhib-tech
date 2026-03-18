@@ -71,6 +71,21 @@ export default function RootLayout({
       <body className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable}`}>
         {children}
 
+        {/* Anchor zone — solid white bar behind corner anchors */}
+        <div
+          aria-hidden="true"
+          style={{
+            position:      "fixed",
+            bottom:        0,
+            left:          0,
+            right:         0,
+            height:        "calc(clamp(0.6rem, 2vw, 1.25rem) + env(safe-area-inset-bottom, 0px) + 1rem)",
+            background:    "#ffffff",
+            pointerEvents: "none",
+            zIndex:        8,
+          }}
+        />
+
         <ContactButton />
       </body>
     </html>
