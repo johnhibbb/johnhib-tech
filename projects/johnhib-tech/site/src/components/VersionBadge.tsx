@@ -14,8 +14,8 @@ export default function VersionBadge() {
         onClick={() => setOpen(true)}
         style={{
           position:      "fixed",
-          bottom:        "clamp(1.25rem, 3vw, 2rem)",
-          left:          "clamp(1.25rem, 3vw, 2rem)",
+          bottom:        "clamp(0.6rem, 2vw, 1.25rem)",
+          left:          "clamp(1rem, 3vw, 2rem)",
           zIndex:        10,
           background:    "none",
           border:        "none",
