@@ -14,13 +14,12 @@ export const versions: Version[] = [
     notes: [
       "Interactive article format: \"Guided Artifact Exploration\"",
       "Expandable artifact cards with monospace content and line numbers",
-      "Hover annotations with cursor-tracking tooltip and soft screen dim",
-      "Cormorant Garamond serif header, .Tech identity",
       "Security headers: CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy",
       "articles.ts split into lib/articles/ — types, data, and index as separate files",
       "middleware.ts stub added — documented extension points for rate limiting, auth, AI input validation",
       "hooks/ directory established for interactive component state",
-      "Ticket Watch article added (Live tag) — AI-run resale price monitor for Ye at SoFi",
+      "Hover annotations with cursor-tracking tooltip and soft screen dim",
+      "Cormorant Garamond serif header, .Tech identity",
     ],
   },
 ];
