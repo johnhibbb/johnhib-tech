@@ -4,8 +4,8 @@ import { getInteractiveArticle, getArticle } from "@/lib/articles";
 
 export const runtime = "edge";
 
-const GOLD = "#C9A84C";
-const BG = "#0a0a0a";
+const ACCENT = "#1a1a1a";
+const BG = "#ffffff";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
@@ -60,7 +60,7 @@ export async function GET(req: NextRequest) {
         >
           <span
             style={{
-              color: "#555",
+              color: "#999",
               fontSize: "17px",
               letterSpacing: "0.06em",
               fontFamily: "Inter",
@@ -72,8 +72,8 @@ export async function GET(req: NextRequest) {
           {tag && (
             <span
               style={{
-                color: GOLD,
-                border: `1px solid ${GOLD}`,
+                color: "#666",
+                border: "1px solid #ccc",
                 borderRadius: "3px",
                 padding: "3px 10px",
                 fontSize: "12px",
@@ -95,7 +95,7 @@ export async function GET(req: NextRequest) {
               fontFamily: "Cormorant Garamond",
               fontStyle: "italic",
               fontSize: isHome ? "96px" : "72px",
-              color: "#ffffff",
+              color: ACCENT,
               lineHeight: 1.08,
               letterSpacing: "-0.01em",
             }}
@@ -107,7 +107,7 @@ export async function GET(req: NextRequest) {
               style={{
                 fontFamily: "Inter",
                 fontWeight: 400,
-                color: "#666",
+                color: "#888",
                 fontSize: "20px",
                 lineHeight: 1.5,
                 maxWidth: "860px",
@@ -120,12 +120,12 @@ export async function GET(req: NextRequest) {
 
         {/* Bottom */}
         <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-          <div style={{ width: "100%", height: "1px", background: "#1c1c1c" }} />
+          <div style={{ width: "100%", height: "1px", background: "#e5e5e5" }} />
           <span
             style={{
               fontFamily: "Inter",
               fontWeight: 400,
-              color: "#444",
+              color: "#aaa",
               fontSize: "15px",
               letterSpacing: "0.04em",
             }}

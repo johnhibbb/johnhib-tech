@@ -83,8 +83,8 @@ const pages = [
 ];
 
 // ─── Card renderer ────────────────────────────────────────────────────────────
-const GOLD = '#C9A84C';
-const BG = '#0a0a0a';
+const ACCENT = '#1a1a1a';
+const BG = '#ffffff';
 const W = 1200;
 const H = 630;
 
@@ -113,7 +113,7 @@ function buildCard({ title, excerpt, tag, isHome }) {
               {
                 type: 'span',
                 props: {
-                  style: { color: '#555', fontSize: 25, letterSpacing: '0.06em', fontFamily: 'Inter', fontWeight: 400 },
+                  style: { color: '#999', fontSize: 25, letterSpacing: '0.06em', fontFamily: 'Inter', fontWeight: 400 },
                   children: 'johnhib.tech',
                 },
               },
@@ -121,8 +121,8 @@ function buildCard({ title, excerpt, tag, isHome }) {
                 type: 'span',
                 props: {
                   style: {
-                    color: GOLD,
-                    border: `1px solid ${GOLD}`,
+                    color: '#666',
+                    border: '1px solid #ccc',
                     borderRadius: 3,
                     padding: '5px 14px',
                     fontSize: 17,
@@ -151,7 +151,7 @@ function buildCard({ title, excerpt, tag, isHome }) {
                     fontFamily: 'Cormorant Garamond',
                     fontStyle: 'italic',
                     fontSize: isHome ? 120 : 90,
-                    color: '#ffffff',
+                    color: ACCENT,
                     lineHeight: 1.08,
                     letterSpacing: '-0.01em',
                   },
@@ -164,7 +164,7 @@ function buildCard({ title, excerpt, tag, isHome }) {
                   style: {
                     fontFamily: 'Inter',
                     fontWeight: 400,
-                    color: '#666',
+                    color: '#888',
                     fontSize: 28,
                     lineHeight: 1.5,
                     maxWidth: 860,
@@ -182,11 +182,11 @@ function buildCard({ title, excerpt, tag, isHome }) {
           props: {
             style: { display: 'flex', flexDirection: 'column', gap: 14 },
             children: [
-              { type: 'div', props: { style: { width: '100%', height: 1, background: '#1c1c1c' } } },
+              { type: 'div', props: { style: { width: '100%', height: 1, background: '#e5e5e5' } } },
               {
                 type: 'span',
                 props: {
-                  style: { fontFamily: 'Inter', fontWeight: 400, color: '#444', fontSize: 24, letterSpacing: '0.04em' },
+                  style: { fontFamily: 'Inter', fontWeight: 400, color: '#aaa', fontSize: 24, letterSpacing: '0.04em' },
                   children: 'Building with AI, documented as it happens.',
                 },
               },
