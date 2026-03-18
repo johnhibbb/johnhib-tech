@@ -34,12 +34,21 @@ export const metadata: Metadata = {
     title: "johnhib.tech",
     description: "Building with AI, documented as it happens.",
     url: "https://johnhib.tech",
+    images: [
+      {
+        url: "/og",
+        width: 1200,
+        height: 630,
+        alt: "johnhib.tech — Building with AI, documented as it happens.",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "johnhib.tech",
     description: "Building with AI, documented as it happens.",
     creator: "@johnhib_",
+    images: ["/og"],
   },
   alternates: {
     canonical: "https://johnhib.tech",

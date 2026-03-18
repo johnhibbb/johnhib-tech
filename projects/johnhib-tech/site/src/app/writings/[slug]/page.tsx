@@ -24,6 +24,7 @@ export async function generateMetadata({
   const interactive = getInteractiveArticle(slug);
   if (interactive) {
     const url = `https://johnhib.tech/writings/${slug}`;
+    const ogImage = `/og?slug=${slug}`;
     return {
       title: interactive.title,
       description: interactive.excerpt,
@@ -34,18 +35,21 @@ export async function generateMetadata({
         url,
         type: "article",
         siteName: "johnhib.tech",
+        images: [{ url: ogImage, width: 1200, height: 630, alt: interactive.title }],
       },
       twitter: {
-        card: "summary",
+        card: "summary_large_image",
         title: interactive.title,
         description: interactive.excerpt,
         creator: "@johnhib_",
+        images: [ogImage],
       },
     };
   }
   const article = getArticle(slug);
   if (!article) return {};
   const url = `https://johnhib.tech/writings/${slug}`;
+  const ogImage = `/og?slug=${slug}`;
   return {
     title: article.title,
     description: article.excerpt,
@@ -56,12 +60,14 @@ export async function generateMetadata({
       url,
       type: "article",
       siteName: "johnhib.tech",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: article.title }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: article.title,
       description: article.excerpt,
       creator: "@johnhib_",
+      images: [ogImage],
     },
   };
 }
