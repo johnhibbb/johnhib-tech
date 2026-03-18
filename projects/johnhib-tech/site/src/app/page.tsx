@@ -35,7 +35,7 @@ export default function Home() {
           .Tech
         </h1>
         <p style={{ color: "#666666" }} className="text-base">
-          Notes on building with AI.
+          Building with AI, documented as it happens.
         </p>
       </header>
 
