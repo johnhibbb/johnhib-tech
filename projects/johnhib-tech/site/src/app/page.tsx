@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
     <VersionBadge />
-    <main className="mx-auto max-w-[680px] px-6 pt-20">
+    <main className="mx-auto max-w-[680px] px-6 pt-20 pb-24">
       {/* Header */}
       <header style={{ marginBottom: "58px" }}>
         <h1
