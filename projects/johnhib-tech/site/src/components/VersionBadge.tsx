@@ -5,7 +5,7 @@ import { versions } from "@/data/versions";
 
 export default function VersionBadge() {
   const [open, setOpen] = useState(false);
-  const current         = versions[versions.length - 1];
+  const current         = versions[0]; // newest first
 
   return (
     <>
