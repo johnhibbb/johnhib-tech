@@ -105,7 +105,7 @@ export default function Home() {
               Sphere{" "}
               <span
                 className="text-xs font-normal uppercase tracking-wide ml-2"
-                style={{ color: "#666666" }}
+                style={{ color: "#666666", background: "#ebebeb", borderRadius: "3px", padding: "1px 6px", letterSpacing: "0.07em", verticalAlign: "middle", display: "inline-block", lineHeight: 1.6 }}
               >
                 In progress
               </span>
@@ -116,7 +116,7 @@ export default function Home() {
               Signal{" "}
               <span
                 className="text-xs font-normal uppercase tracking-wide ml-2"
-                style={{ color: "#666666" }}
+                style={{ color: "#666666", background: "#ebebeb", borderRadius: "3px", padding: "1px 6px", letterSpacing: "0.07em", verticalAlign: "middle", display: "inline-block", lineHeight: 1.6 }}
               >
                 In progress
               </span>
