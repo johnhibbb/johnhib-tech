@@ -24,7 +24,7 @@ export async function generateMetadata({
   const interactive = getInteractiveArticle(slug);
   if (interactive) {
     const url = `https://johnhib.tech/writings/${slug}`;
-    const ogImage = `/og?slug=${slug}`;
+    const ogImage = `/og/${slug}.png`;
     return {
       title: interactive.title,
       description: interactive.excerpt,
@@ -49,7 +49,7 @@ export async function generateMetadata({
   const article = getArticle(slug);
   if (!article) return {};
   const url = `https://johnhib.tech/writings/${slug}`;
-  const ogImage = `/og?slug=${slug}`;
+  const ogImage = `/og/${slug}.png`;
   return {
     title: article.title,
     description: article.excerpt,

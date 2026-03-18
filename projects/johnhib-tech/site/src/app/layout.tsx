@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://johnhib.tech",
     images: [
       {
-        url: "/og",
+        url: "/og/home.png",
         width: 1200,
         height: 630,
         alt: "johnhib.tech — Building with AI, documented as it happens.",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "johnhib.tech",
     description: "Building with AI, documented as it happens.",
     creator: "@johnhib_",
-    images: ["/og"],
+    images: ["/og/home.png"],
   },
   alternates: {
     canonical: "https://johnhib.tech",
