@@ -9,8 +9,36 @@ export default function ContactButton() {
   const [subject,  setSubject]  = useState("");
   const [message,  setMessage]  = useState("");
   const [revealed, setReveal]   = useState(false);
+  const [sending,  setSending]  = useState(false);
+  const [sent,     setSent]     = useState(false);
+  const [error,    setError]    = useState("");
 
-  function handleSend() {
+  async function handleSendNow() {
+    if (!email || !message) {
+      setError("Email and message are required.");
+      return;
+    }
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify({ name, email, subject, message }),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setSent(true);
+      setTimeout(() => {
+        handleClose();
+      }, 1800);
+    } catch {
+      setError("Something went wrong. Try the mail app below.");
+    } finally {
+      setSending(false);
+    }
+  }
+
+  function handleMailApp() {
     const params = new URLSearchParams();
     if (email)   params.set("from",    email);
     if (subject) params.set("subject", subject);
@@ -23,6 +51,8 @@ export default function ContactButton() {
   function handleClose() {
     setOpen(false);
     setReveal(false);
+    setSent(false);
+    setError("");
     setName(""); setEmail(""); setSubject(""); setMessage("");
   }
 
@@ -187,10 +217,11 @@ export default function ContactButton() {
                 transition: `max-height ${EASE}, opacity ${EASE}, margin-top ${EASE}`,
               }}>
                 <button
-                  onClick={handleSend}
+                  onClick={handleSendNow}
+                  disabled={sending || sent}
                   style={{
                     width:         "100%",
-                    background:    "var(--gold, #C8A96E)",
+                    background:    sent ? "#2a5a2a" : "var(--gold, #C8A96E)",
                     border:        "none",
                     borderRadius:  "3px",
                     padding:       "10px",
@@ -198,18 +229,31 @@ export default function ContactButton() {
                     fontSize:      "0.7rem",
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",
-                    color:         "#0a0a0a",
-                    cursor:        "pointer",
+                    color:         sent ? "#aaffaa" : "#0a0a0a",
+                    cursor:        sending ? "wait" : "pointer",
                     fontWeight:    600,
+                    transition:    "background 0.3s ease, color 0.3s ease",
                   }}
                 >
-                  Send now
+                  {sent ? "Sent ✓" : sending ? "Sending…" : "Send now"}
                 </button>
               </div>
 
+              {/* Error */}
+              {error && (
+                <p style={{
+                  marginTop:  "0.5rem",
+                  fontSize:   "0.65rem",
+                  color:      "#ff6b6b",
+                  fontFamily: "var(--font-jetbrains, monospace)",
+                }}>
+                  {error}
+                </p>
+              )}
+
               {/* Open in mail app — always visible */}
               <button
-                onClick={handleSend}
+                onClick={handleMailApp}
                 style={{
                   marginTop:     "0.75rem",
                   width:         "100%",
