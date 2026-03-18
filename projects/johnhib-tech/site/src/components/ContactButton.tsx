@@ -94,9 +94,12 @@ export default function ContactButton() {
             zIndex:         100,
             background:     "rgba(8,8,8,0.85)",
             display:        "flex",
-            alignItems:     "center",
+            alignItems:     "flex-start",
             justifyContent: "center",
-            padding:        "clamp(1rem, 4vw, 2rem)",
+            paddingTop:     "clamp(4rem, 12vh, 8rem)",
+            paddingLeft:    "clamp(1rem, 4vw, 2rem)",
+            paddingRight:   "clamp(1rem, 4vw, 2rem)",
+            paddingBottom:  "clamp(1rem, 4vw, 2rem)",
           }}
         >
           <div
