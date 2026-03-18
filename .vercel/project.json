@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_yAtbwei8fL3i8UYAtHEp0udZaqzM",
+  "orgId": "team_VjaLERHiPhbZu9V5tAFraWQP",
+  "projectName": "johnhib-tech",
+  "settings": {
+    "createdAt": 1773674613243,
+    "framework": "nextjs",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": "projects/johnhib-tech/site",
+    "directoryListing": false,
+    "nodeVersion": "22.x"
+  }
+}

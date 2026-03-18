@@ -21,9 +21,8 @@ export default function Home() {
     <VersionBadge />
     <main className="mx-auto max-w-[680px] px-6 pt-20">
       {/* Header */}
-      <header className="mb-20">
+      <header style={{ marginBottom: "68px" }}>
         <h1
-          className="mb-3"
           style={{
             fontFamily:    "var(--font-playfair), Georgia, serif",
             fontStyle:     "italic",
@@ -32,6 +31,7 @@ export default function Home() {
             letterSpacing: "-0.01em",
             lineHeight:    1.0,
             color:         "#111111",
+            marginBottom:  "10px",
           }}
         >
           .Tech
@@ -42,8 +42,8 @@ export default function Home() {
       {/* Writings */}
       <section className="mb-20">
         <h2
-          className="text-xs font-semibold uppercase tracking-widest mb-8"
-          style={{ color: "#666666" }}
+          className="text-xs font-semibold uppercase tracking-widest"
+          style={{ color: "#666666", marginBottom: "27px" }}
         >
           Writings
         </h2>
@@ -94,8 +94,8 @@ export default function Home() {
       {/* Field Notes */}
       <section className="mb-20">
         <h2
-          className="text-xs font-semibold uppercase tracking-widest mb-8"
-          style={{ color: "#666666" }}
+          className="text-xs font-semibold uppercase tracking-widest"
+          style={{ color: "#666666", marginBottom: "27px" }}
         >
           <Link href="/field-notes" style={{ color: "inherit", textDecoration: "none" }}>
             Field Notes
@@ -133,8 +133,8 @@ export default function Home() {
       {/* Projects */}
       <section>
         <h2
-          className="text-xs font-semibold uppercase tracking-widest mb-8"
-          style={{ color: "#666666" }}
+          className="text-xs font-semibold uppercase tracking-widest"
+          style={{ color: "#666666", marginBottom: "27px" }}
         >
           Projects
         </h2>
