@@ -8,6 +8,18 @@ export interface Version {
 
 export const versions: Version[] = [
   {
+    version: "1.2",
+    date: "2026-03-17",
+    title: "Editorial voice + Signal project",
+    notes: [
+      "Rewrote article intros across all three pieces — shared-experience voice, no expert framing",
+      "Persona extraction prompt condensed to compact retrieval brief",
+      "Security protocol prompt updated — daily cadence, CVE web search, preferred-channel alert",
+      "Signal added to projects stack with In progress tag",
+      "Version history preview tab removed",
+    ],
+  },
+  {
     version: "1.1",
     date: "2026-03-17",
     title: "Security hardening + file structure",

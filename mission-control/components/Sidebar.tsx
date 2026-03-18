@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CheckSquare, GitBranch, FolderKanban, Brain, FileText, Terminal } from "lucide-react";
+import { CheckSquare, GitBranch, FolderKanban, Brain, FileText, Terminal, DollarSign } from "lucide-react";
 
 const nav = [
   { href: "/tasks", label: "Tasks", icon: CheckSquare },
@@ -10,6 +10,7 @@ const nav = [
   { href: "/projects", label: "Projects", icon: FolderKanban },
   { href: "/memory", label: "Memory", icon: Brain },
   { href: "/documents", label: "Documents", icon: FileText },
+  { href: "/spend", label: "Spend", icon: DollarSign },
 ];
 
 export default function Sidebar() {

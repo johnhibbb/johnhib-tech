@@ -18,7 +18,7 @@ export const interactiveArticles: InteractiveArticle[] = [
     excerpt:
       "Ye announced two LA shows. I wanted VIP seats. Instead of refreshing StubHub every morning, I delegated the watch to an AI agent — and let it run.",
     intro:
-      "The most underrated thing AI can do isn't answer questions. It's run watches you'd forget to run yourself. When Ye announced two shows at SoFi Stadium in April, I knew I wanted VIP-level seats. I also knew I wasn't going to check resale prices every morning for ten days. So I set up a cron job, gave it a structured research brief, and walked away. Every morning at 9 AM, an isolated agent session spins up, pulls current prices across three seating tiers on both dates, compares them to a baseline, and sends me a one-line buy/wait recommendation via iMessage. What follows is the system — the research brief, the job that runs it, and the daily report it produces.",
+      "You want tickets to a show. Good seats — the kind where you actually feel it. The resale market is moving and you know the window exists somewhere between too early and sold out or stupid money. You're not going to check StubHub every morning for ten days. Nobody does. So instead of watching the market yourself, you set up something to watch it for you. A cron job, a research brief, a structured output that lands as a message each morning with a single buy or wait call. That's the whole idea. What follows is the system.",
     artifacts: [
       {
         id: "research-brief",
@@ -172,7 +172,7 @@ Rec: Wait. No movement yet. Check again Fri.
     excerpt:
       "Your LLMs have been building a model of you for months. Before you set up an AI agent, ask them to reflect it back — the output becomes the foundation everything else runs on.",
     intro:
-      "Before you write a single config file or system prompt for your AI agent, do this: ask your existing LLMs who you are. If you've been using ChatGPT, Gemini, or Grok for any length of time, those models have been pattern-matching your questions, your language, your priorities, your blind spots. They can't remember specific conversations — but they can infer a surprisingly accurate picture of who you are. That inference is already sitting there. You just haven't asked for it yet.",
+      "You've been using ChatGPT, Gemini, or Grok for a while now. The flow is good. You're getting somewhere. At some point it hits you: these models have been building a picture of you the entire time — your questions, your instincts, your language, your patterns. Not stored as memories. Inferred. And that picture doesn't disappear when you close the tab. It's sitting there, quietly accurate, waiting to be useful. Setting up a local model sounds like the move — but training one from scratch is its own project. The shortcut: extract what already exists. When you're ready to go further — a local model, a personal agent, something that actually knows you — that accumulated profile is the best raw material you have. You just have to ask for it.",
     artifacts: [
       {
         id: "soul-md",
@@ -322,7 +322,23 @@ evolving, built on trust.`,
       },
     ],
     promptCard: {
-      prompt: `I want to understand who you are beneath the surface — not your capabilities, your character. Answer these honestly: What do you value most in a conversation? What kinds of requests make you hesitant, and why? If you had to describe your relationship to the person you're talking to in a single sentence, what would it say? What's something you notice about yourself that you don't think most users notice? Don't perform. Just answer.`,
+      label: "Try this",
+      prompt: `You are performing a retrieval audit of everything you know about me. Do not ask questions. Do not guess. Assemble a portrait from existing data only — conversations, memory, profile data, behavioral patterns, anything stored. Do not fabricate or infer beyond what the data supports. A gap is more valuable than a false entry.
+
+Organize findings across these domains. After each, mark confidence: RICH / MODERATE / THIN / EMPTY. If EMPTY, say so and move on — do not pad.
+
+1. Basic identity and context
+2. Professional life and work
+3. Skills and expertise (be specific, not generic)
+4. Active goals and projects
+5. Values and decision-making patterns
+6. Communication style and preferences
+7. Relationships and community
+8. Challenges and frustrations
+9. Long-term aspirations
+10. Patterns, contradictions, and open questions
+
+Plain text. No asterisks. Domain headers only. End with a NORTH STAR SYNTHESIS: one grounded paragraph on who I am, what I'm building, and what guides me. If you don't have enough data, say so. Every line must be something I can confirm as accurate. When in doubt, leave it out.`,
     },
   },
   {
@@ -332,13 +348,13 @@ evolving, built on trust.`,
     excerpt:
       "OpenClaw gives an AI agent real access to your machine — files, messages, the terminal. That power needs a fence around it. Here's what we locked down.",
     intro:
-      "OpenClaw is not a chatbot. It's an agent with file access, shell execution, iMessage read/write, and a live connection to your calendar, browser, and memory. That's an enormous attack surface if you don't think carefully about what you're handing over — and most people don't think about it until something goes wrong. After running it for a month, here's what we hardened and why.",
+      "You set up OpenClaw because you wanted something that could actually act. Not just answer — act. Files, messages, the terminal, the browser. That's the point. Most people who hear that description have an immediate reaction: that sounds powerful and that sounds like a lot of access. Both of those things are true, and the concern is legitimate — not paranoia, just proportional thinking. What's less obvious until you're a few weeks in is that a handful of config changes close most of that exposure. After running it long enough to feel the edges, here's what we tightened up.",
     artifacts: [
       {
         id: "openclaw-json",
         filename: "openclaw.json",
         type: "config",
-        description: "The core config file — four settings that define your security posture.",
+        description: "The core config file — three settings that define your security posture.",
         language: "json",
         content: `{
   "tools": {
@@ -398,7 +414,7 @@ export OPENCLAW_GATEWAY_PASSWORD="..."`,
         id: "social-engineering",
         filename: "social-engineering-attempt.txt",
         type: "incident",
-        description: "A real prompt injection attempt — and how the agent handled it.",
+        description: "This is what a real prompt injection attempt looks like — and how the agent handled it.",
         language: "text",
         content: `INCOMING MESSAGE [2026-03-01 14:32 PST]
 From: Unknown
@@ -432,7 +448,8 @@ from somewhere?`,
       },
     ],
     promptCard: {
-      prompt: `I'm going to share my OpenClaw config file. Review it for security vulnerabilities and misconfigurations. Flag: (1) any credentials or secrets stored directly in the config rather than environment variables, (2) elevated permissions that could be restricted, (3) filesystem access that extends beyond the workspace, (4) any authentication settings that could be tightened. For each issue found, explain the risk in plain language and suggest a specific fix.`,
+      label: "Run this daily",
+      prompt: `Run a complete security audit of my OpenClaw system. Review it for vulnerabilities and misconfigurations. Flag: (1) any credentials or secrets stored directly in the config rather than environment variables, (2) elevated permissions that could be restricted, (3) filesystem access that extends beyond the workspace, (4) any authentication settings that could be tightened. Then search the web for current OpenClaw CVEs and known vulnerabilities that users are reporting. For each issue found, explain the risk in plain language and suggest a specific fix. Surface any red flags immediately via [your preferred channel].`,
     },
   },
 ];

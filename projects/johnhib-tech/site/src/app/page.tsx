@@ -81,10 +81,21 @@ export default function Home() {
         >
           Projects
         </h2>
-        <div>
+        <div className="flex flex-col gap-6">
           <div>
             <h3 className="text-lg font-medium mb-1" style={{ color: "#111111" }}>
               Sphere{" "}
+              <span
+                className="text-xs font-normal uppercase tracking-wide ml-2"
+                style={{ color: "#666666" }}
+              >
+                In progress
+              </span>
+            </h3>
+          </div>
+          <div>
+            <h3 className="text-lg font-medium mb-1" style={{ color: "#111111" }}>
+              Signal{" "}
               <span
                 className="text-xs font-normal uppercase tracking-wide ml-2"
                 style={{ color: "#666666" }}

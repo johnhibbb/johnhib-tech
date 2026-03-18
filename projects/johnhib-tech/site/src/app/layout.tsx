@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Inter, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,6 +14,12 @@ const cormorant = Cormorant_Garamond({
   style: ["normal", "italic"],
 });
 
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  weight: ["400", "500"],
+});
+
 export const metadata: Metadata = {
   title: "johnhib.tech",
   description: "Notes on building with AI.",
@@ -26,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${cormorant.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable}`}>{children}</body>
     </html>
   );
 }
