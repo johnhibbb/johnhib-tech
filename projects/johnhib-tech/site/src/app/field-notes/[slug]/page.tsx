@@ -15,9 +15,28 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const note = fieldNotes.find((n) => n.slug === slug);
   if (!note) return {};
+  const url = `https://johnhib.tech/field-notes/${slug}`;
+  const ogImage = `/og/${slug}.png`;
+  const description = note.body.slice(0, 160);
   return {
     title: `${note.title} — Field Notes`,
-    description: note.body.slice(0, 160),
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: note.title,
+      description,
+      url,
+      type: "article",
+      siteName: "johnhib.tech",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: note.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: note.title,
+      description,
+      creator: "@johnhib_",
+      images: [ogImage],
+    },
   };
 }
 

@@ -48,12 +48,38 @@ function extractArticles(source) {
   return articles;
 }
 
+// ─── Load field notes data ────────────────────────────────────────────────────
+const fieldNotesSource = readFileSync(join(ROOT, 'src/lib/field-notes/data.ts'), 'utf8');
+
+function extractFieldNotes(source) {
+  const notes = [];
+  const slugMatches = [...source.matchAll(/slug:\s*["']([^"']+)["']/g)];
+  const titleMatches = [...source.matchAll(/title:\s*["']([^"']+)["']/g)];
+  // Extract body content between backtick template literals
+  const bodyMatches = [...source.matchAll(/body:\s*`([\s\S]*?)`\s*,?\s*\}/g)];
+
+  for (let i = 0; i < slugMatches.length; i++) {
+    const body = bodyMatches[i]?.[1]?.trim() ?? '';
+    // Use first 140 chars of body as excerpt
+    const excerpt = body.length > 140 ? body.slice(0, 140) + '…' : body;
+    notes.push({
+      slug: slugMatches[i]?.[1] ?? '',
+      title: titleMatches[i]?.[1] ?? 'johnhib.tech',
+      excerpt,
+      tag: 'Field Notes',
+    });
+  }
+  return notes;
+}
+
 const articles = extractArticles(dataSource);
+const fieldNotes = extractFieldNotes(fieldNotesSource);
 
 // Always add home
 const pages = [
   { slug: 'home', title: 'johnhib.tech', excerpt: '', tag: null, isHome: true },
   ...articles.map(a => ({ ...a, isHome: false })),
+  ...fieldNotes.map(n => ({ ...n, isHome: false })),
 ];
 
 // ─── Card renderer ────────────────────────────────────────────────────────────
