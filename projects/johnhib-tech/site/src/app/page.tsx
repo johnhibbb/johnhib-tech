@@ -2,6 +2,12 @@ import Link from "next/link";
 import { articles, interactiveArticles } from "@/lib/articles";
 import VersionBadge from "@/components/VersionBadge";
 
+const TAG_COLORS: Record<string, { color: string; background: string }> = {
+  Automation: { color: "#1a6b3a", background: "#e6f4ec" },
+  Technique:  { color: "#1a4a8a", background: "#e6eef9" },
+  Setup:      { color: "#7a4a00", background: "#fef3e2" },
+};
+
 const allArticles = [
   ...interactiveArticles.map(a => ({ slug: a.slug, title: a.title, date: a.date, excerpt: a.excerpt, tag: a.tag })),
   ...articles.map(a => ({ slug: a.slug, title: a.title, date: a.date, excerpt: a.excerpt, tag: undefined as string | undefined })),
@@ -53,14 +59,26 @@ export default function Home() {
                   style={{ color: "#111111" }}
                 >
                   {article.title}
-                  {article.tag && (
-                    <span
-                      className="text-xs font-normal uppercase tracking-wide ml-2"
-                      style={{ color: "#666666" }}
-                    >
-                      {article.tag}
-                    </span>
-                  )}
+                  {article.tag && (() => {
+                    const tc = TAG_COLORS[article.tag] ?? { color: "#555", background: "#eee" };
+                    return (
+                      <span
+                        className="text-xs font-normal uppercase tracking-wide ml-2"
+                        style={{
+                          color:        tc.color,
+                          background:   tc.background,
+                          borderRadius: "3px",
+                          padding:      "1px 6px",
+                          letterSpacing: "0.07em",
+                          verticalAlign: "middle",
+                          display:      "inline-block",
+                          lineHeight:   1.6,
+                        }}
+                      >
+                        {article.tag}
+                      </span>
+                    );
+                  })()}
                 </h3>
                 {article.excerpt && (
                   <p className="text-sm" style={{ color: "#666666", marginTop: "4px" }}>
