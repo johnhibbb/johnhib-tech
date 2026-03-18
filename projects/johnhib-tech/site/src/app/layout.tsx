@@ -85,6 +85,20 @@ export default function RootLayout({
             zIndex:        8,
           }}
         />
+        {/* Feather — blends top edge of white bar into page */}
+        <div
+          aria-hidden="true"
+          style={{
+            position:      "fixed",
+            bottom:        "calc(clamp(0.6rem, 2vw, 1.25rem) + env(safe-area-inset-bottom, 0px) + 1rem)",
+            left:          0,
+            right:         0,
+            height:        "1.5rem",
+            background:    "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+            pointerEvents: "none",
+            zIndex:        8,
+          }}
+        />
 
         <ContactButton />
       </body>
