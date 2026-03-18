@@ -15,3 +15,4 @@ node_modules/
 
 # Inbound media cache
 media/inbound/
+inbox/
