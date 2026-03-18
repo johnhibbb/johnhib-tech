@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import ContactButton from "@/components/ContactButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,8 +22,28 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "johnhib.tech",
-  description: "Notes on building with AI.",
+  title: {
+    default: "johnhib.tech",
+    template: "%s — johnhib.tech",
+  },
+  description: "Building with AI, documented as it happens.",
+  metadataBase: new URL("https://johnhib.tech"),
+  openGraph: {
+    type: "website",
+    siteName: "johnhib.tech",
+    title: "johnhib.tech",
+    description: "Building with AI, documented as it happens.",
+    url: "https://johnhib.tech",
+  },
+  twitter: {
+    card: "summary",
+    title: "johnhib.tech",
+    description: "Building with AI, documented as it happens.",
+    creator: "@johnhib_",
+  },
+  alternates: {
+    canonical: "https://johnhib.tech",
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +53,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable}`}>
+        {children}
+        <ContactButton />
+      </body>
     </html>
   );
 }

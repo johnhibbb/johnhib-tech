@@ -22,10 +22,48 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const interactive = getInteractiveArticle(slug);
-  if (interactive) return { title: `${interactive.title} — johnhib.tech` };
+  if (interactive) {
+    const url = `https://johnhib.tech/writings/${slug}`;
+    return {
+      title: interactive.title,
+      description: interactive.excerpt,
+      alternates: { canonical: url },
+      openGraph: {
+        title: interactive.title,
+        description: interactive.excerpt,
+        url,
+        type: "article",
+        siteName: "johnhib.tech",
+      },
+      twitter: {
+        card: "summary",
+        title: interactive.title,
+        description: interactive.excerpt,
+        creator: "@johnhib_",
+      },
+    };
+  }
   const article = getArticle(slug);
   if (!article) return {};
-  return { title: `${article.title} — johnhib.tech` };
+  const url = `https://johnhib.tech/writings/${slug}`;
+  return {
+    title: article.title,
+    description: article.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url,
+      type: "article",
+      siteName: "johnhib.tech",
+    },
+    twitter: {
+      card: "summary",
+      title: article.title,
+      description: article.excerpt,
+      creator: "@johnhib_",
+    },
+  };
 }
 
 export default async function ArticlePage({
