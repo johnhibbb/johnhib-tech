@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
     <VersionBadge />
-    <main className="mx-auto max-w-[680px] px-6 pt-20 pb-16">
+    <main className="mx-auto max-w-[680px] px-6 pt-20">
       {/* Header */}
       <header className="mb-20">
         <h1
