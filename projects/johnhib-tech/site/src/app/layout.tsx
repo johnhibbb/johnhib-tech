@@ -21,6 +21,12 @@ const jetbrains = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   title: {
     default: "johnhib.tech",

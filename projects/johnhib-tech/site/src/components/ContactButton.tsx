@@ -87,7 +87,7 @@ export default function ContactButton() {
         onClick={() => setOpen(true)}
         style={{
           position:        "fixed",
-          bottom:          "clamp(0.6rem, 2vw, 1.25rem)",
+          bottom:          "calc(clamp(0.6rem, 2vw, 1.25rem) + env(safe-area-inset-bottom, 0px))",
           right:           "clamp(1rem, 3vw, 2rem)",
           zIndex:          10,
           background:      "none",
