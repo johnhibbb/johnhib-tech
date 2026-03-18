@@ -87,7 +87,7 @@ function buildCard({ title, excerpt, tag, isHome }) {
               {
                 type: 'span',
                 props: {
-                  style: { color: '#555', fontSize: 24, letterSpacing: '0.06em', fontFamily: 'Inter', fontWeight: 400 },
+                  style: { color: '#555', fontSize: 25, letterSpacing: '0.06em', fontFamily: 'Inter', fontWeight: 400 },
                   children: 'johnhib.tech',
                 },
               },
@@ -160,7 +160,7 @@ function buildCard({ title, excerpt, tag, isHome }) {
               {
                 type: 'span',
                 props: {
-                  style: { fontFamily: 'Inter', fontWeight: 400, color: '#444', fontSize: 23, letterSpacing: '0.04em' },
+                  style: { fontFamily: 'Inter', fontWeight: 400, color: '#444', fontSize: 24, letterSpacing: '0.04em' },
                   children: 'Building with AI, documented as it happens.',
                 },
               },

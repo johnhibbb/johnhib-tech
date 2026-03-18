@@ -133,6 +133,7 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 - **Discord/WhatsApp:** No markdown tables! Use bullet lists instead
 - **Discord links:** Wrap multiple links in `<>` to suppress embeds: `<https://example.com>`
 - **WhatsApp:** No headers — use **bold** or CAPS for emphasis
+- **iMessage:** NO markdown at all — no backticks, no `**bold**`, no `_italics_`. Plain text only. URLs must be bare (never wrapped in backticks or any other characters). Use plain dashes or arrows for structure if needed.
 
 ## 💓 Heartbeats - Be Proactive!
 

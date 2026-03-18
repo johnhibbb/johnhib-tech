@@ -38,6 +38,16 @@ Things like:
 - **Style note:** John is drawn to documentary narration (Attenborough-style) — warm, measured, authoritative tone preferred
 - Configured under `messages.tts` in `openclaw.json`
 
+## iMessage Link Formatting
+
+**Never use markdown link syntax `[text](url)` in iMessage** — the parentheses appear as literal characters and break the URL.
+
+Rules for iMessage:
+- Always use bare URLs: `https://example.com` (not `[click here](https://example.com)`)
+- Put URLs on their own line, or leave a clear space after them
+- No trailing punctuation (period, comma, etc.) immediately after a URL
+- No `<>` angle brackets (that's a Discord-only trick to suppress embeds)
+
 ## iMessage Media Workaround
 
 The `message` tool's `filePath` param has an internal allowed-directory check that rejects workspace paths (likely a path normalization issue with the trailing `.` in our workspace dir). **Use `imsg send --file` via `exec` instead:**
