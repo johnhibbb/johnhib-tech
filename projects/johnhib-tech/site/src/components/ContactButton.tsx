@@ -46,7 +46,7 @@ export default function ContactButton() {
           padding:       0,
           cursor:        "pointer",
           fontFamily:    "var(--font-jetbrains, monospace)",
-          fontSize:      "0.65rem",
+          fontSize:      "0.72rem",
           color:         "var(--muted, #6B6B6B)",
           letterSpacing: "0.06em",
           opacity:       0.4,
