@@ -2,6 +2,7 @@ import Link from "next/link";
 import { articles, interactiveArticles } from "@/lib/articles";
 import { fieldNotes } from "@/lib/field-notes";
 import VersionBadge from "@/components/VersionBadge";
+import CyclingSubhead from "@/components/CyclingSubhead";
 
 const TAG_COLORS: Record<string, { color: string; background: string }> = {
   Automation: { color: "#1a6b3a", background: "#e6f4ec" },
@@ -35,9 +36,7 @@ export default function Home() {
         >
           .Tech
         </h1>
-        <p style={{ color: "#666666" }} className="text-base">
-          Building with AI, documented as it happens.
-        </p>
+        <CyclingSubhead />
       </header>
 
       {/* Writings */}
