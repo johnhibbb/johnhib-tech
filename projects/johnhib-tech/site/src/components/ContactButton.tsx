@@ -113,8 +113,8 @@ export default function ContactButton() {
             {/* Fields */}
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               <input
-                type="text"
-                placeholder="Your name"
+                type="email"
+                placeholder="Your email"
                 value={name}
                 onChange={e => setName(e.target.value)}
                 style={inputStyle}
@@ -135,7 +135,7 @@ export default function ContactButton() {
               />
             </div>
 
-            {/* Send */}
+            {/* Send now — primary CTA */}
             <button
               onClick={handleSend}
               style={{
@@ -152,6 +152,28 @@ export default function ContactButton() {
                 color:         "#0a0a0a",
                 cursor:        "pointer",
                 fontWeight:    600,
+              }}
+            >
+              Send now
+            </button>
+
+            {/* Open in mail app — secondary */}
+            <button
+              onClick={handleSend}
+              style={{
+                marginTop:     "0.75rem",
+                width:         "100%",
+                background:    "none",
+                border:        "1px solid rgba(255,255,255,0.08)",
+                borderRadius:  "3px",
+                padding:       "10px",
+                fontFamily:    "var(--font-jetbrains, monospace)",
+                fontSize:      "0.7rem",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                color:         "var(--muted, #6B6B6B)",
+                cursor:        "pointer",
+                fontWeight:    400,
               }}
             >
               Open in mail app →
