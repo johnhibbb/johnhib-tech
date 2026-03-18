@@ -138,9 +138,7 @@ APR 3 (original date, lower supply)
   Neighboring: $524 · Sec 244, Row 11 (StubHub)
   Trend: ↑ Slight uptick from baseline
 
-Rec: Wait. No movement yet. Check again Fri.
-
-— María`,
+Rec: Wait. No movement yet. Check again Fri.`,
         annotations: [
           {
             id: "three-tier-output",
@@ -152,11 +150,7 @@ Rec: Wait. No movement yet. Check again Fri.
             anchor: "Rec: Wait. No movement yet. Check again Fri.",
             note: "One sentence. No hedging, no paragraph of caveats, no 'it depends.' The format was specified in the research brief — decisive output is a design choice that has to be explicitly requested.",
           },
-          {
-            id: "signed",
-            anchor: "— María",
-            note: "The agent signs its own name. Not 'AI Assistant' or 'OpenClaw' — a named entity with a consistent identity. Small detail; different relationship.",
-          },
+
         ],
       },
     ],
