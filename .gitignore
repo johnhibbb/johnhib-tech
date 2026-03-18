@@ -1,6 +1,10 @@
 # Credentials — never commit
 credentials.md
 auth-profiles.json
+.env
+.env.local
+.env*.local
+mission-control/.env*
 
 # Temp / build artifacts
 tmp/
