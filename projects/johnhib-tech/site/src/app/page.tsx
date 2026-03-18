@@ -21,7 +21,7 @@ export default function Home() {
     <VersionBadge />
     <main className="mx-auto max-w-[680px] px-6 pt-20">
       {/* Header */}
-      <header style={{ marginBottom: "68px" }}>
+      <header style={{ marginBottom: "58px" }}>
         <h1
           style={{
             fontFamily:    "var(--font-playfair), Georgia, serif",
@@ -40,7 +40,7 @@ export default function Home() {
       </header>
 
       {/* Writings */}
-      <section className="mb-20">
+      <section style={{ marginBottom: "58px" }}>
         <h2
           className="text-xs font-semibold uppercase tracking-widest"
           style={{ color: "#666666", marginBottom: "27px" }}
@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* Field Notes */}
-      <section className="mb-20">
+      <section style={{ marginBottom: "58px" }}>
         <h2
           className="text-xs font-semibold uppercase tracking-widest"
           style={{ color: "#666666", marginBottom: "27px" }}
