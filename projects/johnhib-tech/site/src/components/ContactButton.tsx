@@ -38,24 +38,28 @@ export default function ContactButton() {
         onClick={() => setOpen(true)}
         style={{
           position:      "fixed",
-          bottom:        "clamp(1rem, 2vw, 1.5rem)",
-          right:         "clamp(1rem, 2vw, 1.5rem)",
+          bottom:        "clamp(1.25rem, 3vw, 2rem)",
+          right:         "clamp(1.25rem, 3vw, 2rem)",
           zIndex:        10,
           background:    "none",
           border:        "none",
           padding:       0,
           cursor:        "pointer",
           fontFamily:    "var(--font-jetbrains, monospace)",
-          fontSize:      "0.72rem",
+          fontSize:      "0.79rem",
           color:         "var(--muted, #6B6B6B)",
           letterSpacing: "0.06em",
           opacity:       0.4,
           transition:    "opacity 0.2s ease",
           userSelect:    "none",
           lineHeight:    1,
+          display:       "block",
+          transform:     "translateZ(0)",
+          WebkitTransform: "translateZ(0)",
         }}
         onMouseEnter={e => (e.currentTarget.style.opacity = "0.9")}
         onMouseLeave={e => (e.currentTarget.style.opacity = "0.4")}
+        data-corner-anchor=""
         aria-label="Get in touch"
       >
         contact
