@@ -115,7 +115,7 @@ export default function ArtifactViewer({ artifact }: ArtifactViewerProps) {
                     padding: '0 1px',
                     transition: 'background 0.15s ease',
                     position: 'relative',
-                    zIndex: 101,
+                    zIndex: 1,
                   }}
                 >
                   {seg.text}
@@ -137,12 +137,12 @@ export default function ArtifactViewer({ artifact }: ArtifactViewerProps) {
 
   return (
     <>
-      {/* Dark overlay — always mounted, fades in/out via opacity */}
+      {/* Dark overlay — covers everything including the artifact; tooltip floats above */}
       <div
         style={{
           position: 'fixed',
           inset: 0,
-          background: 'rgba(0, 0, 0, 0.12)',
+          background: 'rgba(0, 0, 0, 0.35)',
           zIndex: 99,
           pointerEvents: 'none',
           opacity: tooltip ? 1 : 0,
@@ -175,8 +175,8 @@ export default function ArtifactViewer({ artifact }: ArtifactViewerProps) {
         {activeAnnotation?.note ?? ''}
       </div>
 
-      {/* Code block — z-index above overlay so text is visible underneath tooltip */}
-      <div style={{ position: 'relative', zIndex: 100 }}>
+      {/* Code block — below overlay so it dims on hover */}
+      <div style={{ position: 'relative', zIndex: 1 }}>
         <div
           style={{
             background: '#ffffff',
