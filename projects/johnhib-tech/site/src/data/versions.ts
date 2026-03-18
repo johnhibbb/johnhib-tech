@@ -8,6 +8,17 @@ export interface Version {
 
 export const versions: Version[] = [
   {
+    version: "1.1",
+    date: "2026-03-17",
+    title: "SEO + social card",
+    notes: [
+      "Dynamic OG image route — custom 1200×630 card rendered server-side per page",
+      "Cormorant Garamond italic title, gold tag, dark background — card matches site identity",
+      "Upgraded to summary_large_image — full-width banner preview in iMessage, Twitter, Slack",
+      "Per-article metadata: title, excerpt, and tag surface in every social preview",
+    ],
+  },
+  {
     version: "1.0",
     date: "2026-03-16",
     title: "Initial launch",
