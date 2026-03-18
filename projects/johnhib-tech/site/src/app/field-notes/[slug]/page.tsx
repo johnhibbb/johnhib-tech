@@ -48,7 +48,7 @@ export default async function FieldNotePage({ params }: Props) {
   return (
     <>
       <VersionBadge />
-      <main className="mx-auto max-w-[680px] px-6 py-20">
+      <main className="mx-auto max-w-[680px] px-6 pt-20 pb-32">
         <nav className="mb-12">
           <Link
             href="/field-notes"

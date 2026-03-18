@@ -92,7 +92,7 @@ export default async function ArticlePage({
   const html = await marked(article.content);
 
   return (
-    <main className="mx-auto max-w-[680px] px-6 py-20">
+    <main className="mx-auto max-w-[680px] px-6 pt-20 pb-32">
       <nav className="mb-12">
         <Link href="/" className="text-sm" style={{ color: "#0066cc" }}>
           ← johnhib.tech

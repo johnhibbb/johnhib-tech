@@ -64,6 +64,22 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable}`}>
         {children}
+
+        {/* Bottom fade — masks content behind corner anchors */}
+        <div
+          aria-hidden="true"
+          style={{
+            position:   "fixed",
+            bottom:     0,
+            left:       0,
+            right:      0,
+            height:     "6rem",
+            background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+            pointerEvents: "none",
+            zIndex:     9,
+          }}
+        />
+
         <ContactButton />
       </body>
     </html>

@@ -11,7 +11,7 @@ export default function FieldNotesIndex() {
   return (
     <>
       <VersionBadge />
-      <main className="mx-auto max-w-[680px] px-6 py-20">
+      <main className="mx-auto max-w-[680px] px-6 pt-20 pb-32">
         <header className="mb-16">
           <Link
             href="/"
