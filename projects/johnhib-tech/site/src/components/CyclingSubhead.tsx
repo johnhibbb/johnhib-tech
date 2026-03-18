@@ -4,7 +4,7 @@ import { useState, useCallback } from "react";
 
 const SUBHEADS = [
   "Documenting what works before I forget how I got here.",
-  "The gap between the promise and what it actually delivers is where the work lives.",
+  "The promise is real. So is the gap.",
   "No manual. Just what breaks and what doesn't.",
 ];
 
