@@ -51,11 +51,11 @@ export default async function FieldNotePage({ params }: Props) {
       <main className="mx-auto max-w-[680px] px-6 pt-20 pb-32">
         <nav className="mb-12">
           <Link
-            href="/field-notes"
+            href="https://johnhib.tech"
             className="text-xs uppercase tracking-widest"
             style={{ color: "#999999", textDecoration: "none" }}
           >
-            ← Field Notes
+            ← johnhib.tech
           </Link>
         </nav>
 
