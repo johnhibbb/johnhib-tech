@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { articles, interactiveArticles } from "@/lib/articles";
+import { fieldNotes } from "@/lib/field-notes";
 import VersionBadge from "@/components/VersionBadge";
 
 const TAG_COLORS: Record<string, { color: string; background: string }> = {
@@ -89,6 +90,45 @@ export default function Home() {
             </article>
           ))}
         </div>
+      </section>
+
+      {/* Field Notes */}
+      <section className="mb-20">
+        <h2
+          className="text-xs font-semibold uppercase tracking-widest mb-8"
+          style={{ color: "#666666" }}
+        >
+          <Link href="/field-notes" style={{ color: "inherit", textDecoration: "none" }}>
+            Field Notes
+          </Link>
+        </h2>
+        {fieldNotes.length === 0 ? (
+          <p className="text-sm" style={{ color: "#999999" }}>First note incoming.</p>
+        ) : (
+          <div className="flex flex-col gap-6">
+            {fieldNotes.slice(0, 3).map((note) => (
+              <article key={note.slug}>
+                <Link href={`/field-notes/${note.slug}`} style={{ textDecoration: "none" }}>
+                  <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#999999" }}>
+                    {note.date}
+                  </p>
+                  <h3 className="text-lg font-medium leading-snug" style={{ color: "#111111" }}>
+                    {note.title}
+                  </h3>
+                </Link>
+              </article>
+            ))}
+            {fieldNotes.length > 3 && (
+              <Link
+                href="/field-notes"
+                className="text-xs uppercase tracking-widest"
+                style={{ color: "#999999", textDecoration: "none" }}
+              >
+                All notes →
+              </Link>
+            )}
+          </div>
+        )}
       </section>
 
       {/* Projects */}

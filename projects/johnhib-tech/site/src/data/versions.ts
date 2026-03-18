@@ -8,6 +8,15 @@ export interface Version {
 
 export const versions: Version[] = [
   {
+    version: "1.2",
+    date: "2026-03-17",
+    title: "Field Notes + OG typography",
+    notes: [
+      "Field Notes section added — short-form observations, distinct from interactive articles",
+      "OG image typography bump: domain label 24→25px, footer tagline 23→24px",
+    ],
+  },
+  {
     version: "1.1",
     date: "2026-03-17",
     title: "SEO + social card",
