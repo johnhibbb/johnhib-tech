@@ -39,13 +39,13 @@ export default function Home() {
         <CyclingSubhead />
       </header>
 
-      {/* Writings */}
+      {/* Guides */}
       <section style={{ marginBottom: "58px" }}>
         <h2
           className="text-xs font-semibold uppercase tracking-widest"
           style={{ color: "#666666", marginBottom: "27px" }}
         >
-          Writings
+          Guides
         </h2>
         <div className="flex flex-col gap-10">
           {allArticles.map((article) => (
