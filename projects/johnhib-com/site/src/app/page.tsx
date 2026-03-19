@@ -152,11 +152,12 @@ export default function Home() {
               color:          "var(--muted)",
               textDecoration: "none",
               letterSpacing:  "0.04em",
-              transition:     "color 0.25s ease",
+              transition:     "color 0.25s ease, transform 0.25s ease",
               lineHeight:     1,
+              transformOrigin: "right center",
             }}
-            onMouseEnter={e => ((e.target as HTMLElement).style.color = "var(--gold)")}
-            onMouseLeave={e => ((e.target as HTMLElement).style.color = "var(--muted)")}
+            onMouseEnter={e => { const el = e.target as HTMLElement; el.style.color = "var(--gold)"; el.style.transform = "translateX(2px) scale(1.06)"; }}
+            onMouseLeave={e => { const el = e.target as HTMLElement; el.style.color = "var(--muted)"; el.style.transform = "none"; }}
           >
             johnhib.tech →
           </a>
