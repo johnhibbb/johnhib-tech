@@ -91,14 +91,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Field Notes */}
+      {/* Observations */}
       <section style={{ marginBottom: "58px" }}>
         <h2
           className="text-xs font-semibold uppercase tracking-widest"
           style={{ color: "#666666", marginBottom: "27px" }}
         >
           <Link href="/field-notes" style={{ color: "inherit", textDecoration: "none" }}>
-            Field Notes
+            Observations
           </Link>
         </h2>
         {fieldNotes.length === 0 ? (

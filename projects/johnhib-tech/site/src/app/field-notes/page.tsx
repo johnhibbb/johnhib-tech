@@ -3,7 +3,7 @@ import { fieldNotes } from "@/lib/field-notes";
 import VersionBadge from "@/components/VersionBadge";
 
 export const metadata = {
-  title: "Field Notes — johnhib.tech",
+  title: "Observations — johnhib.tech",
   description: "Short observations documented in the field.",
 };
 
@@ -32,7 +32,7 @@ export default function FieldNotesIndex() {
               color:         "#111111",
             }}
           >
-            Field Notes
+            Observations
           </h1>
           <p className="mt-3 text-sm" style={{ color: "#666666" }}>
             Short observations documented in the field. No demo required.

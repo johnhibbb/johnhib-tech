@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props) {
   const ogImage = `/og/${slug}.png`;
   const description = note.body.slice(0, 160);
   return {
-    title: `${note.title} — Field Notes`,
+    title: `${note.title} — Observations`,
     description,
     alternates: { canonical: url },
     openGraph: {

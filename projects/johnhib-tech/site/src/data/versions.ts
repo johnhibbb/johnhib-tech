@@ -10,12 +10,12 @@ export const versions: Version[] = [
   {
     version: "1.1",
     date: "2026-03-17",
-    title: "SEO, Social Cards, Field Notes",
+    title: "SEO, Social Cards, Observations",
     notes: [
       "Social cards built to brand — type, palette, and layout consistent across all content",
       "Full-width preview format across iMessage, Twitter, and Slack",
       "Per-article metadata: title, excerpt, and tag surface in every social preview",
-      "Field Notes section added — short-form observations",
+      "Observations section added — short-form, unpolished thinking",
     ],
   },
   {
