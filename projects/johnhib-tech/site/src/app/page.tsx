@@ -5,9 +5,9 @@ import VersionBadge from "@/components/VersionBadge";
 import CyclingSubhead from "@/components/CyclingSubhead";
 
 const TAG_COLORS: Record<string, { color: string; background: string }> = {
-  Automation: { color: "#1a6b3a", background: "#e6f4ec" },
-  Technique:  { color: "#1a4a8a", background: "#e6eef9" },
-  Setup:      { color: "#7a4a00", background: "#fef3e2" },
+  Automation: { color: "#1a7a4a", background: "#e8faf0" },
+  Technique:  { color: "#6b3fa0", background: "#f5f0ff" },
+  Setup:      { color: "#1a56db", background: "#e8f0fe" },
 };
 
 const allArticles = [

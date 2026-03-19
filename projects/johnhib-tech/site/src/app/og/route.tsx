@@ -7,6 +7,12 @@ export const runtime = "edge";
 const ACCENT = "#1a1a1a";
 const BG = "#ffffff";
 
+const TAG_COLORS: Record<string, { color: string; background: string }> = {
+  Automation: { color: "#1a7a4a", background: "#e8faf0" },
+  Technique:  { color: "#6b3fa0", background: "#f5f0ff" },
+  Setup:      { color: "#1a56db", background: "#e8f0fe" },
+};
+
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const slug = searchParams.get("slug");
@@ -69,23 +75,26 @@ export async function GET(req: NextRequest) {
           >
             johnhib.tech
           </span>
-          {tag && (
+          {tag && (() => {
+            const tc = TAG_COLORS[tag] ?? { color: "#555", background: "#eee" };
+            return (
             <span
               style={{
-                color: "#666",
-                border: "1px solid #ccc",
+                color: tc.color,
+                background: tc.background,
                 borderRadius: "3px",
                 padding: "3px 10px",
                 fontSize: "12px",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 fontFamily: "Inter",
-                fontWeight: 400,
+                fontWeight: 500,
               }}
             >
               {tag}
             </span>
-          )}
+            );
+          })()}
         </div>
 
         {/* Center content */}
