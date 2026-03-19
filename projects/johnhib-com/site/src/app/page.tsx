@@ -6,7 +6,7 @@ import VersionBadge from "@/components/VersionBadge";
 
 // ─── Cycling subhead lines ─────────────────────────────────────────────────────
 const SUBHEADS = [
-  "Just a guy that takes technology seriously.",
+  "I create. That part was never negotiable.",
   "The tools keep changing. The questions stay the same.",
   "Still figuring out what to do with all of it.",
 ];
@@ -146,20 +146,16 @@ export default function Home() {
             href="https://johnhib.tech"
             target="_blank"
             rel="noopener noreferrer"
+            className="tech-link"
             style={{
               fontFamily:     "var(--font-jetbrains)",
               fontSize:       "0.72rem",
-              color:          "var(--muted)",
               textDecoration: "none",
-              letterSpacing:  "0.04em",
-              transition:     "color 0.25s ease, transform 0.25s ease",
               lineHeight:     1,
-              transformOrigin: "right center",
             }}
-            onMouseEnter={e => { const el = e.target as HTMLElement; el.style.color = "var(--gold)"; el.style.transform = "translateX(2px) scale(1.06)"; }}
-            onMouseLeave={e => { const el = e.target as HTMLElement; el.style.color = "var(--muted)"; el.style.transform = "none"; }}
           >
-            johnhib.tech →
+            <span className="tech-text">johnhib.tech</span>
+            <span className="tech-arrow">→</span>
           </a>
         </div>
       </div>

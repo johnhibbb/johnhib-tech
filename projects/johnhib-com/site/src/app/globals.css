@@ -36,4 +36,42 @@ a {
   color: var(--bg);
 }
 
+/* .tech link — idle pulse + arrow drift + hover scale */
+@keyframes techPulse {
+  0%, 100% { opacity: 0.62; }
+  40%       { opacity: 0.75; }
+}
 
+@keyframes arrowDrift {
+  from { transform: translateX(0px); }
+  to   { transform: translateX(3px); }
+}
+
+.tech-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32em;
+  color: var(--muted);
+  animation: techPulse 2.38s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  transition: color 0.21s ease;
+  transform: scale(1.18);
+  transform-origin: right center;
+}
+
+.tech-text {
+  display: inline-block;
+  letter-spacing: 0.04em;
+}
+
+.tech-arrow {
+  display: inline-block;
+  animation: arrowDrift 1.31s linear infinite alternate;
+}
+
+/* Hover — warm color only, arrow keeps drifting */
+.tech-link:hover {
+  animation: none;
+  opacity: 1;
+  color: var(--gold);
+  transform: scale(1.18);
+}
