@@ -12,8 +12,8 @@ export const versions: Version[] = [
     date: "2026-03-17",
     title: "SEO, Social Cards, Field Notes",
     notes: [
-      "Cormorant Garamond italic title, gold tag, dark background — card matches site identity",
-      "Upgraded to summary_large_image — full-width banner preview in iMessage, Twitter, Slack",
+      "Social cards built to brand — type, palette, and layout consistent across all content",
+      "Full-width preview format across iMessage, Twitter, and Slack",
       "Per-article metadata: title, excerpt, and tag surface in every social preview",
       "Field Notes section added — short-form observations",
     ],
