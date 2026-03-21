@@ -121,8 +121,8 @@ function buildCard({ title, excerpt, tag, isHome }) {
                 type: 'span',
                 props: {
                   style: {
-                    color: '#666',
-                    border: '1px solid #ccc',
+                    color: '#666666',
+                    background: '#ebebeb',
                     borderRadius: 3,
                     padding: '5px 14px',
                     fontSize: 17,
@@ -187,7 +187,7 @@ function buildCard({ title, excerpt, tag, isHome }) {
                 type: 'span',
                 props: {
                   style: { fontFamily: 'Inter', fontWeight: 400, color: '#aaa', fontSize: 24, letterSpacing: '0.04em' },
-                  children: 'Building with AI, documented as it happens.',
+                  children: 'Somewhere between a lab notebook and a diary.',
                 },
               },
             ],
