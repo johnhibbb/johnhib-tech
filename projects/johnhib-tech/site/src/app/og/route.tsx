@@ -139,7 +139,7 @@ export async function GET(req: NextRequest) {
               letterSpacing: "0.04em",
             }}
           >
-            Building with AI, documented as it happens.
+            Somewhere between a lab notebook and a diary.
           </span>
         </div>
       </div>

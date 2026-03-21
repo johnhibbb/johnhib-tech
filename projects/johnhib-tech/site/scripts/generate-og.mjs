@@ -117,23 +117,31 @@ function buildCard({ title, excerpt, tag, isHome }) {
                   children: 'johnhib.tech',
                 },
               },
-              tag ? {
-                type: 'span',
-                props: {
-                  style: {
-                    color: '#666666',
-                    background: '#ebebeb',
-                    borderRadius: 3,
-                    padding: '5px 14px',
-                    fontSize: 17,
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase',
-                    fontFamily: 'Inter',
-                    fontWeight: 400,
+              tag ? (() => {
+                const TAG_COLORS = {
+                  Automation: { color: '#1a7a4a', background: '#e8faf0' },
+                  Technique:  { color: '#6b3fa0', background: '#f5f0ff' },
+                  Setup:      { color: '#1a56db', background: '#e8f0fe' },
+                };
+                const tc = TAG_COLORS[tag] ?? { color: '#555', background: '#eee' };
+                return {
+                  type: 'span',
+                  props: {
+                    style: {
+                      color: tc.color,
+                      background: tc.background,
+                      borderRadius: 3,
+                      padding: '5px 14px',
+                      fontSize: 17,
+                      letterSpacing: '0.1em',
+                      textTransform: 'uppercase',
+                      fontFamily: 'Inter',
+                      fontWeight: 500,
+                    },
+                    children: tag,
                   },
-                  children: tag,
-                },
-              } : { type: 'span', props: { children: '' } },
+                };
+              })() : { type: 'span', props: { children: '' } },
             ],
           },
         },
